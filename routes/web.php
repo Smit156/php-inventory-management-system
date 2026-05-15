@@ -24,6 +24,14 @@ switch($page){
         require '../app/controllers/CategoryController.php';
         break;
 
+    case 'invoice' : 
+        require '../app/controllers/InvoiceController.php';
+        break;
+
+    case 'create_invoice' : 
+        require '../app/controllers/CreateInvoiceController.php';
+        break;
+
     case 'logout' :
         session_destroy();
         header("Location: ?page=login");
@@ -31,7 +39,7 @@ switch($page){
         break;
 
     default:
-        require '../app/views/dashboard.php';
+        require '../app/controllers/DashboardController.php';
         break;
 }
 ?>

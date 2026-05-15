@@ -16,6 +16,8 @@ if(isset($_POST['add_products'])){
         $_POST['price']
     );
 
+    $_SESSION['success'] = "Product Added Successfully";
+
     header("Location: ?page=products");
 }
 
@@ -41,6 +43,8 @@ if(isset($_POST['update_product'])){
         $_POST['quantity'],
         $_POST['price']
     );
+
+    $_SESSION['success'] = "Product Updated Successfully";
 
     header("Location: ?page=products");
 }

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php require_once '../app/views/layouts/header.php'; ?>
+
+<!-- <!DOCTYPE html>
 <html>
 <head>
 
@@ -7,67 +9,65 @@
 
 </head>
 
-<body>
-    <div class="container mt-5">
+<body> -->
+    <!-- <div class="container mt-5"> -->
+        <div class="main-card">
+            <!-- <h2>Category Management</h2> -->
+            <div class="card-header bg-dark text-white">
+                <h3>Category Management</h3>
+            </div>
+            <div class="card-body">
+                <a href="index.php" class="btn btn-secondary mb-3">Dashboard</a>
 
-        <h2>Category Management</h2>
+                <form method="POST" class="mb-4">
 
-        <a href="index.php" class="btn btn-dark mb-3">Dashboard</a>
+                    <input type="hidden" name="id" value="<?= $editCategory['id'] ?? ''; ?>">
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <input type="text" name="name" class="form-control" style="height:50px;" placeholder="Enter Category Name" value="<?= $editCategory['name'] ?? ''; ?>" required >
+                        </div>
 
-        <!-- <form method="POST" class="mb-4">
-            <div class ='row'>
-                <div class="col-md-6">
-                    <input type="text" name='name' class="form-control" placeholder="Enter Category Name" required>
-                </div>
-                <div class="col-md-2">
-                    <button type="submit" name="add_category" class="btn btn-success">Add Category</button>
+                        <div class="col-md-4">
+                            <?php if(isset($editCategory)) : ?>
+                                <button type="submit" style="height:50px;" name="update_category"class="btn btn-primary w-100">
+                                    Update Category
+                                </button>
+
+                            <?php else : ?>
+
+                                <button type="submit" style="height:50px;" name="add_category" class="btn btn-success w-100">
+                                    Add Category
+                                </button>
+
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="table-responsive">               
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr><th>ID</th><th>Name</th><th>Action</th></tr>
+                        </thead>
+                        
+                        <tbody>
+
+                            <?php while($row = $categories->fetch(PDO::FETCH_ASSOC)) :?>
+
+                                <tr>
+                                    <td><?=  $row['id']; ?></td>
+                                    <td><?=  $row['name']; ?></td>
+                                    <td> <a href="?page=categories&edit=<?= $row['id']; ?>" class="btn btn-primary btn-sm px-4">Edit</a>
+                                    <a href="?page=categories&delete=<?= $row['id']; ?>" class="btn btn-danger btn-sm px-4" onclick="return confirm('Are You Sure?')">Delete</a></td>
+                                </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </form> -->
+        </div>
+    <!-- </div> -->
+    <?php require_once '../app/views/layouts/footer.php'; ?>
 
-        <form method="POST" class="mb-4">
-
-            <input type="hidden" name="id" value="<?= $editCategory['id'] ?? ''; ?>">
-            <div class="row">
-                <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Enter Category Name" value="<?= $editCategory['name'] ?? ''; ?>" required >
-                </div>
-
-                <div class="col-md-3">
-                    <?php if(isset($editCategory)) : ?>
-                        <button type="submit" name="update_category"class="btn btn-primary">
-                            Update Category
-                        </button>
-
-                    <?php else : ?>
-
-                        <button type="submit" name="add_category" class="btn btn-success">
-                            Add Category
-                        </button>
-
-                    <?php endif; ?>
-                </div>
-            </div>
-        </form>
-
-        <table class="table table-bordered">
-            <thead>
-                <tr><th>ID</th><th>Name</th><th>Action</th></tr>
-            </thead>
-            
-            <tbody>
-
-                <?php while($row = $categories->fetch(PDO::FETCH_ASSOC)) :?>
-
-                    <tr>
-                        <td><?=  $row['id']; ?></td>
-                        <td><?=  $row['name']; ?></td>
-                        <td> <a href="?page=categories&edit=<?= $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
-                        <a href="?page=categories&delete=<?= $row['id']; ?>" class="btn btn-danger btn-sm">Delete</a></td>
-                    </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+<!-- </body>
+</html> -->

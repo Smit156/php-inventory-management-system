@@ -25,30 +25,30 @@
 <h1 class="mb-4">Dashboard</h1>
 
 <div class="row">
-    <div class="col-md-4">
-        <div class="card bg-primary text-white shadow">
-            <div class="card-body">
-                <h4>Total Products</h4>
-                <h2>20</h2>
-            </div>
+    <div class="col-md-4 mb-4">
+        <div class="dashboard-card card-blue">
+            <!-- <div class="card-body"> -->
+                <h5>Total Products</h5>
+                <h1><?= $totalProducts['total_products']; ?></h1>
+            <!-- </div> -->
         </div>
     </div>
 
-    <div class="col-md-4">
-        <div class="card bg-success text-white shadow">
-            <div class="card-body">
-                <h4>Total Category</h4>
-                <h2>10</h2>
-            </div>
+    <div class="col-md-4 mb-4">
+        <div class="dashboard-card card-green">
+            <!-- <div class="card-body"> -->
+                <h5>Total Category</h5>
+                <h1><?= $totalCategories['total_category']; ?></h1>
+            <!-- </div> -->
         </div>
     </div>
 
-    <div class="col-md-4">
-        <div class="card bg-dark text-white shadow">
-            <div class="card-body">
-                <h4>Total Stock</h4>
-                <h2>500</h2>
-            </div>
+    <div class="col-md-4 mb-4">
+        <div class="dashboard-card card-blue">
+            <!-- <div class="card-body"> -->
+                <h5>Total Stock</h5>
+                <h1><?= $totalStock['total_stock']; ?></h1>
+            <!-- </div> -->
         </div>
     </div>
 </div>

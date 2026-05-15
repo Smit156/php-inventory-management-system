@@ -9,6 +9,8 @@ if(isset($_POST['add_category'])){
     $name = $_POST['name'];
     $category->create($name);
 
+    $_SESSION['success'] = "Categoty Added Successfully";
+
     header("Location: ?page=categories");
 }
 
@@ -32,6 +34,8 @@ if(isset($_POST['update_category'])){
         $_POST['id'],
         $_POST['name']
     );
+
+    $_SESSION['success'] = "Categoty Updated Successfully";
 
     header("Location: ?page=categories");
 }
