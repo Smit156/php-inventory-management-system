@@ -1,33 +1,71 @@
 # Inventory Management System
 
-A complete Inventory Management System built using Core PHP, MySQL, MVC Architecture, and CRUD Operations.
+A professional Inventory Management System built using Core PHP, MySQL, MVC Architecture, AJAX, and Bootstrap 5.
 
-## Features
+This project helps manage products, categories, invoices, and inventory reports through an admin dashboard.
 
-- Admin Login
-- Product CRUD
-- Category CRUD
-- Dashboard
-- Search Filter
-- Pagination
+---
+
+# Features
+
+- Admin Login System
 - Session Authentication
-- Bootstrap Admin Panel
+- Dashboard Analytics
+- Category CRUD
+- Product CRUD
+- Edit / Delete Products
+- Search Products
+- Pagination
+- AJAX CRUD
+- Dynamic Invoice Generation
+- Invoice Print System
+- Product Report Print
+- Responsive Sidebar Layout
+- Bootstrap 5 UI
+- MVC Architecture
+- PDO Database Connection
 
-## Technologies Used
+---
 
-- PHP
+# Technologies Used
+
+- Core PHP
 - MySQL
+- MVC Architecture
 - Bootstrap 5
-- HTML/CSS
+- AJAX
+- jQuery
+- HTML5
+- CSS3
 - JavaScript
 
-## Installation
+---
 
-1. Clone the repository
-2. Import database SQL file
-3. Run XAMPP Apache & MySQL
-4. Open project in browser
+# Folder Structure
 
-## Author
+inventory-management-system/
 
-PHP Developer Portfolio Project
+├── app/
+│   ├── controllers/
+│   ├── models/
+│   ├── views/
+│
+├── config/
+│
+├── public/
+│   ├── assets/
+│
+├── routes/
+│
+├── database/
+
+---
+
+# Installation Process
+
+## Step 1
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/inventory-management-system.git
